@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Recommendations</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>🌾 Crop Recommendations</h1>
+
+        <p>
+            Based on your farm details, these crops are suitable.
+        </p>
+
+    </div>
+<div class="crop-card">
+
+    <h1>🏆 Best Recommended Crop</h1>
+
+    <h2>🌱 {{ best_crop.Crop }}</h2>
+
+    <div class="score">
+        Suitability: {{ best_crop.Score }}%
+    </div>
+
+    <div class="info">
+        💰 <strong>Estimated Profit:</strong>
+        ₹{{ "%.0f"|format(best_crop.Estimated_Profit) }}
+    </div>
+
+    <div class="info">
+        🌾 <strong>Expected Yield:</strong>
+        {{ best_crop.Expected_Yield_Kg }} Kg/Acre
+    </div>
+
+    <h3>Why this is the Best?</h3>
+
+    <ul>
+        {% for reason in best_crop.Reasons %}
+        <li>✅ {{ reason }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+    {% for crop in crops %}
+
+    <div class="crop-card">
+
+        <h2>🌱 {{ crop.Crop }}</h2>
+
+        <div class="score">
+            Suitability: {{ crop.Score }}%
+        </div>
+
+        <hr>
+
+        <div class="info">
+            🌱 <strong>Soil:</strong>
+            {{ crop.Soil_Type }}
+        </div>
+
+        <div class="info">
+            📅 <strong>Season:</strong>
+            {{ crop.Season }}
+        </div>
+
+        <div class="info">
+            💧 <strong>Water:</strong>
+            {{ crop.Water_Level }}
+        </div>
+
+        <div class="info">
+            💰 <strong>Cost/Acre:</strong>
+            ₹{{ crop.Budget_Per_Acre }}
+        </div>
+
+        <div class="info">
+            💰 <strong>Total Cost:</strong>
+            ₹{{ crop.Total_Cost }}
+        </div>
+
+        <div class="info">
+            ⏱️ <strong>Duration:</strong>
+            {{ crop.Duration_Days }} Days
+        </div>
+
+        <div class="info">
+            🌾 <strong>Expected Yield:</strong>
+            {{ crop.Expected_Yield_Kg }} Kg/Acre
+        </div>
+        <div class="info">
+    💵 <strong>Market Price:</strong>
+    ₹{{ crop.Market_Price_Per_Kg }}/Kg
+</div>
+
+<div class="info">
+    💰 <strong>Expected Revenue:</strong>
+    ₹{{ "%.0f"|format(crop.Expected_Revenue) }}
+</div>
+
+<div class="info">
+    📈 <strong>Estimated Profit:</strong>
+    ₹{{ "%.0f"|format(crop.Estimated_Profit) }}
+</div>
+        <div class="info">
+    <strong>Why Recommended?</strong>
+</div>
+
+<ul>
+    {% for reason in crop.Reasons %}
+        <li>✓ {{ reason }}</li>
+    {% endfor %}
+</ul>
+
+    </div>
+
+    {% endfor %}
+<h2>📊 Crop Comparison</h2>
+
+<table border="1" cellpadding="10" cellspacing="0" width="100%">
+
+    <tr>
+        <th>Crop</th>
+        <th>Score</th>
+        <th>Total Cost</th>
+        <th>Revenue</th>
+        <th>Profit</th>
+    </tr>
+
+    {% for crop in crops %}
+
+    <tr>
+        <td>{{ crop.Crop }}</td>
+        <td>{{ crop.Score }}%</td>
+        <td>₹{{ "%.0f"|format(crop.Total_Cost) }}</td>
+        <td>₹{{ "%.0f"|format(crop.Expected_Revenue) }}</td>
+        <td>₹{{ "%.0f"|format(crop.Estimated_Profit) }}</td>
+    </tr>
+
+    {% endfor %}
+
+</table>
+<!-- Cultivation Timeline -->
+<div class="crop-card">
+
+    <h2>📅 Cultivation Timeline</h2>
+
+    <h3>🌱 {{ best_crop.Crop }}</h3>
+
+    {% if timeline %}
+
+        {% for day, activity in timeline %}
+
+        <div class="info">
+            <strong>{{ day }}</strong>
+            → {{ activity }}
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="info">
+            No cultivation timeline available for this crop yet.
+        </div>
+
+    {% endif %}
+
+</div>
+<!-- Fertilizer Recommendation -->
+<div class="crop-card">
+
+    <h2>🌱 Fertilizer Recommendation</h2>
+
+    <h3>{{ best_crop.Crop }}</h3>
+
+    <h4>Recommended Nutrients</h4>
+
+    <ul>
+        {% for nutrient in fertilizer_info.nutrients %}
+        <li>🌿 {{ nutrient }}</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Application Schedule</h4>
+
+    {% if fertilizer_info.fertilizers %}
+
+        {% for day, fertilizer in fertilizer_info.fertilizers %}
+
+        <div class="info">
+            <strong>{{ day }}</strong>
+            → 🌱 {{ fertilizer }}
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="info">
+            No fertilizer information available for this crop yet.
+        </div>
+
+    {% endif %}
+
+    <p>
+        <small>
+            Note: Fertilizer selection and application should be
+            adjusted based on soil testing and local agricultural guidance.
+        </small>
+    </p>
+
+</div>
+<!-- Download PDF Report -->
+<form action="/download_report" method="POST">
+
+    <input type="hidden" name="crop_name"
+           value="{{ best_crop.Crop }}">
+
+    <input type="hidden" name="land_area"
+           value="{{ land_area }}">
+
+    <input type="hidden" name="soil_type"
+           value="{{ best_crop.Soil_Type }}">
+
+    <input type="hidden" name="season"
+           value="{{ best_crop.Season }}">
+
+    <input type="hidden" name="water_level"
+           value="{{ best_crop.Water_Level }}">
+
+    <input type="hidden" name="budget"
+           value="{{ budget }}">
+
+    <input type="hidden" name="total_cost"
+           value="{{ best_crop.Total_Cost }}">
+
+    <input type="hidden" name="expected_revenue"
+           value="{{ best_crop.Expected_Revenue }}">
+
+    <input type="hidden" name="estimated_profit"
+           value="{{ best_crop.Estimated_Profit }}">
+
+    <input type="hidden" name="score"
+           value="{{ best_crop.Score }}">
+
+    <button type="submit" class="download-btn">
+        📄 Download PDF Report
+    </button>
+
+</form>
+
+<a class="back-link" href="/">
+    ← Plan Again
+</a>
+    <a class="back-link" href="/">
+        ← Plan Again
+    </a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Crop Planning Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>🌾 Smart Crop Planning Assistant</h1>
+
+        <p>
+            Get suitable crop recommendations based on your
+            farm conditions.
+        </p>
+
+    </div>
+
+    <div class="form-card">
+
+        <form action="/recommend" method="POST">
+
+            <div class="form-group">
+
+                <label>Land Area (Acres)</label>
+
+                <input
+                    type="number"
+                    name="land_area"
+                    step="0.1"
+                    min="0.1"
+                    placeholder="Example: 2"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Soil Type</label>
+
+                <select name="soil_type" required>
+
+                    <option value="">
+                        Select Soil Type
+                    </option>
+
+                    <option value="Clay">
+                        Clay
+                    </option>
+
+                    <option value="Loamy">
+                        Loamy
+                    </option>
+
+                    <option value="Sandy">
+                        Sandy
+                    </option>
+
+                    <option value="Black">
+                        Black
+                    </option>
+
+                    <option value="Red">
+                        Red
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Season</label>
+
+                <select name="season" required>
+
+                    <option value="">
+                        Select Season
+                    </option>
+
+                    <option value="Kharif">
+                        Kharif
+                    </option>
+
+                    <option value="Rabi">
+                        Rabi
+                    </option>
+
+                    <option value="Zaid">
+                        Zaid
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Available Water</label>
+
+                <select name="water_level" required>
+
+                    <option value="">
+                        Select Water Availability
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Budget (₹)</label>
+
+                <input
+                    type="number"
+                    name="budget"
+                    min="1"
+                    placeholder="Example: 50000"
+                    required>
+
+            </div>
+
+
+            <button type="submit">
+                🌱 Recommend Crops
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

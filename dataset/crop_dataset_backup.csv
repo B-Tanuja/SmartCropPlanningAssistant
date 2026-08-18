@@ -1,0 +1,21 @@
+Crop,Soil_Type,Season,Water_Level,Budget_Per_Acre,Duration_Days,Expected_Yield_Kg,Temperature,Rainfall,Market_Price_Per_Kg
+Rice,Clay,Kharif,High,30000,120,2500,25-35,150,25
+Rice,Loamy,Kharif,High,30000,120,2400,25-35,150,25
+Maize,Loamy,Kharif,Medium,24000,100,2200,22-30,80,22
+Maize,Red,Kharif,Medium,24000,100,2000,22-30,80,22
+Groundnut,Loamy,Kharif,Medium,22000,110,1800,24-30,80,60
+Groundnut,Red,Kharif,Medium,22000,110,1700,24-30,80,60
+Green Gram,Loamy,Zaid,Low,18000,75,700,25-32,50,90
+Green Gram,Red,Zaid,Low,18000,75,650,25-32,50,90
+Black Gram,Loamy,Rabi,Low,19000,90,700,25-32,50,85
+Black Gram,Black,Rabi,Low,19000,90,750,25-32,50,85
+Cotton,Black,Kharif,Medium,35000,160,1800,21-30,60,70
+Cotton,Red,Kharif,Medium,35000,160,1600,21-30,60,70
+Wheat,Loamy,Rabi,Medium,26000,120,2200,15-25,75,30
+Wheat,Black,Rabi,Medium,26000,120,2100,15-25,75,30
+Chickpea,Black,Rabi,Low,23000,110,1000,20-30,60,65
+Chickpea,Loamy,Rabi,Low,23000,110,950,20-30,60,65
+Sorghum,Red,Kharif,Low,18000,110,1200,25-32,50,28
+Sorghum,Black,Kharif,Low,18000,110,1300,25-32,50,28
+Pearl Millet,Sandy,Kharif,Low,17000,90,1000,25-35,40,25
+Pearl Millet,Red,Kharif,Low,17000,90,950,25-35,40,25

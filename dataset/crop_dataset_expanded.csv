@@ -1,0 +1,111 @@
+Crop,Soil_Type,Season,Water_Level,Budget_Per_Acre,Duration_Days,Expected_Yield_Kg,Temperature,Rainfall,Market_Price_Per_Kg
+Rice,Clay,Kharif,High,30000,120,2500,25-35,150,28
+Rice,Loamy,Kharif,High,30000,120,2400,25-35,150,28
+Rice,Clay,Rabi,High,32000,125,2600,20-30,120,30
+Rice,Loamy,Kharif,Medium,29000,115,2300,25-35,140,28
+Rice,Alluvial,Kharif,High,31000,120,2550,25-35,160,29
+Rice,Clay,Kharif,Medium,29500,118,2350,25-35,145,28
+Maize,Loamy,Kharif,Medium,24000,100,2200,22-30,80,22
+Maize,Red,Kharif,Medium,24000,100,2000,22-30,80,22
+Maize,Loamy,Rabi,Medium,25000,105,2250,18-28,60,23
+Maize,Red,Kharif,Low,23000,95,1900,22-30,75,22
+Maize,Alluvial,Kharif,Medium,24500,100,2300,22-30,85,23
+Maize,Loamy,Rabi,Low,23500,100,2050,18-28,55,22
+Groundnut,Loamy,Kharif,Medium,22000,110,1800,24-30,80,55
+Groundnut,Red,Kharif,Medium,22000,110,1750,24-30,80,55
+Groundnut,Sandy,Kharif,Low,21000,105,1650,25-32,70,54
+Groundnut,Red,Rabi,Low,21500,115,1700,22-30,60,56
+Groundnut,Loamy,Kharif,Low,20500,105,1600,24-30,75,55
+Groundnut,Sandy,Rabi,Low,20000,110,1550,22-30,55,54
+Green Gram,Loamy,Kharif,Low,18000,70,900,25-32,60,70
+Green Gram,Red,Kharif,Low,17500,65,850,25-32,55,70
+Green Gram,Sandy,Rabi,Low,17000,70,800,20-30,50,72
+Green Gram,Loamy,Rabi,Medium,18000,75,950,20-30,55,70
+Green Gram,Red,Kharif,Medium,18500,70,920,25-32,65,71
+Green Gram,Sandy,Rabi,Low,16500,65,780,20-30,45,72
+Black Gram,Loamy,Kharif,Medium,19000,75,950,25-32,65,75
+Black Gram,Red,Kharif,Low,18000,70,850,25-32,60,74
+Black Gram,Loamy,Rabi,Low,18500,75,900,20-30,50,76
+Black Gram,Red,Rabi,Medium,19500,80,980,20-30,55,75
+Black Gram,Sandy,Kharif,Low,17500,70,820,25-32,55,74
+Black Gram,Loamy,Kharif,Medium,19000,72,930,25-32,65,75
+Cotton,Black,Kharif,Medium,35000,180,1800,25-35,100,70
+Cotton,Black,Kharif,High,37000,190,2000,25-35,120,72
+Cotton,Red,Kharif,Medium,34000,175,1650,25-35,90,70
+Cotton,Black,Kharif,Low,33000,170,1500,25-35,80,68
+Cotton,Loamy,Kharif,Medium,36000,180,1850,25-35,105,71
+Cotton,Black,Rabi,Medium,35500,175,1750,22-32,90,70
+Chilli,Red,Kharif,Medium,45000,150,2200,22-32,80,90
+Chilli,Loamy,Kharif,Medium,44000,145,2100,22-32,75,92
+Chilli,Red,Rabi,Medium,43000,150,2050,18-30,60,95
+Chilli,Loamy,Kharif,High,46000,155,2300,22-32,90,90
+Chilli,Red,Kharif,Low,42000,140,1950,22-32,70,88
+Chilli,Loamy,Rabi,Low,41000,145,1900,18-30,55,90
+Tomato,Loamy,Rabi,Medium,40000,120,5000,18-28,60,25
+Tomato,Red,Rabi,Medium,39000,115,4700,18-28,55,25
+Tomato,Loamy,Kharif,High,42000,125,5200,20-30,90,24
+Tomato,Red,Rabi,Low,37000,110,4300,18-28,50,26
+Tomato,Alluvial,Rabi,Medium,41000,120,5100,18-28,65,25
+Tomato,Loamy,Kharif,Medium,40000,120,4800,20-30,80,25
+Soybean,Black,Kharif,Medium,28000,100,1500,22-30,75,48
+Soybean,Loamy,Kharif,Medium,27500,95,1450,22-30,70,48
+Soybean,Black,Kharif,High,29000,105,1600,22-30,85,50
+Soybean,Red,Kharif,Low,26000,95,1300,22-30,65,47
+Soybean,Loamy,Rabi,Low,26500,100,1400,20-28,55,49
+Soybean,Black,Kharif,Medium,28000,100,1520,22-30,75,48
+Sunflower,Red,Rabi,Low,23000,100,1100,20-30,50,60
+Sunflower,Loamy,Rabi,Medium,24000,105,1200,20-30,55,62
+Sunflower,Red,Kharif,Medium,24500,100,1150,22-32,65,61
+Sunflower,Black,Rabi,Medium,25000,105,1250,20-30,60,63
+Sunflower,Loamy,Rabi,Low,22500,95,1050,20-30,45,60
+Sunflower,Red,Rabi,Medium,23500,100,1150,20-30,55,62
+Onion,Loamy,Rabi,Medium,38000,140,6000,15-25,60,30
+Onion,Red,Rabi,Medium,37000,135,5700,15-25,55,30
+Onion,Loamy,Kharif,High,40000,145,6200,18-28,80,28
+Onion,Red,Rabi,Low,35000,130,5300,15-25,50,32
+Onion,Alluvial,Rabi,Medium,39000,140,6100,15-25,65,30
+Onion,Loamy,Rabi,Low,36000,135,5500,15-25,50,31
+Potato,Loamy,Rabi,Medium,35000,110,7000,15-25,60,22
+Potato,Sandy,Rabi,Medium,33000,100,6500,15-25,55,21
+Potato,Loamy,Rabi,High,37000,115,7500,15-25,70,23
+Potato,Alluvial,Rabi,Medium,36000,110,7200,15-25,65,22
+Potato,Sandy,Rabi,Low,32000,100,6000,15-25,45,21
+Potato,Loamy,Rabi,Low,34000,105,6800,15-25,50,22
+Sugarcane,Loamy,Kharif,High,60000,300,30000,25-35,150,35
+Sugarcane,Black,Kharif,High,62000,320,32000,25-35,160,36
+Sugarcane,Alluvial,Kharif,High,61000,310,31500,25-35,170,35
+Sugarcane,Loamy,Rabi,High,59000,300,29000,22-32,130,34
+Sugarcane,Black,Kharif,Medium,58000,290,28000,25-35,140,35
+Sugarcane,Alluvial,Kharif,Medium,60000,300,30000,25-35,150,36
+Bengal Gram,Black,Rabi,Low,21000,110,1200,18-28,45,65
+Bengal Gram,Loamy,Rabi,Medium,22000,115,1300,18-28,50,66
+Bengal Gram,Black,Rabi,Medium,22500,120,1350,18-28,55,67
+Bengal Gram,Red,Rabi,Low,20000,105,1100,18-28,40,64
+Bengal Gram,Loamy,Rabi,Low,20500,110,1150,18-28,45,65
+Bengal Gram,Black,Rabi,Medium,21500,115,1250,18-28,50,66
+Red Gram,Red,Kharif,Low,22000,180,1000,25-35,70,75
+Red Gram,Black,Kharif,Medium,23000,190,1100,25-35,80,77
+Red Gram,Loamy,Kharif,Medium,22500,185,1050,25-35,75,76
+Red Gram,Red,Kharif,Medium,23500,190,1150,25-35,85,78
+Red Gram,Black,Kharif,Low,21500,175,950,25-35,65,74
+Red Gram,Loamy,Kharif,Low,21000,180,980,25-35,70,75
+Rice,Alluvial,Rabi,Medium,30500,120,2450,20-30,110,29
+Rice,Clay,Kharif,Medium,28500,115,2250,25-35,135,27
+Maize,Black,Kharif,Medium,25000,105,2350,22-30,90,23
+Maize,Alluvial,Rabi,Medium,24500,100,2150,18-28,65,22
+Groundnut,Red,Kharif,High,23000,115,1900,24-30,90,56
+Groundnut,Loamy,Rabi,Medium,22500,110,1750,22-30,65,55
+Green Gram,Alluvial,Kharif,Low,18000,70,880,25-32,60,71
+Green Gram,Red,Rabi,Medium,18500,75,930,20-30,55,72
+Black Gram,Alluvial,Kharif,Medium,19500,75,980,25-32,70,76
+Black Gram,Sandy,Rabi,Low,17500,70,820,20-30,50,74
+Cotton,Black,Kharif,Medium,36500,185,1900,25-35,110,71
+Cotton,Red,Kharif,Low,32500,165,1450,25-35,75,68
+Chilli,Alluvial,Kharif,High,45500,150,2250,22-32,85,91
+Chilli,Red,Rabi,Low,41500,140,1950,18-30,55,89
+Tomato,Alluvial,Rabi,High,42500,125,5300,18-28,70,26
+Tomato,Red,Kharif,Medium,40500,120,4900,20-30,80,25
+Soybean,Alluvial,Kharif,Medium,28500,100,1550,22-30,80,49
+Soybean,Red,Kharif,Low,25500,95,1280,22-30,60,47
+Onion,Alluvial,Rabi,Medium,39500,140,6200,15-25,65,31
+Potato,Alluvial,Rabi,High,37500,115,7600,15-25,70,23
